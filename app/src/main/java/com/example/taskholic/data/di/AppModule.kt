@@ -1,5 +1,17 @@
 package com.example.taskholic.data.di
 
+import android.content.Context
+import com.example.taskholic.data.local.dao.TaskDao
+import com.example.taskholic.data.local.dao.TaskListDao
+import com.example.taskholic.data.local.database.AppDatabase
+import com.example.taskholic.data.repository.TaskRepository
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
