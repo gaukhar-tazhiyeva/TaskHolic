@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskListsFragment">
+
+    <fragment
+        android:id="@+id/taskListsFragment"
+        android:name="com.example.taskholic.ui.tasklists.TaskListsFragment"
+        android:label="Lists">
+        <action
+            android:id="@+id/action_lists_to_tasks"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.taskholic.ui.tasks.TasksFragment"
+        android:label="Tasks">
+        <argument
+            android:name="listId"
+            app:argType="long" />
+        <argument
+            android:name="listName"
+            app:argType="string" />
+    </fragment>
+</navigation>
