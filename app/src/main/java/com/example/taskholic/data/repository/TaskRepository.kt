@@ -1,4 +1,11 @@
-package com.example.taskholic.data.local.repository
+package com.example.taskholic.data.repository
+
+import com.example.taskholic.data.local.dao.TaskDao
+import com.example.taskholic.data.local.dao.TaskListDao
+import com.example.taskholic.data.local.entity.TaskEntity
+import com.example.taskholic.data.local.entity.TaskListEntity
+import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 class TaskRepository @Inject constructor(
     private val taskListDao: TaskListDao,
@@ -20,4 +27,6 @@ class TaskRepository @Inject constructor(
     suspend fun updateTask(task: TaskEntity) = taskDao.updateTask(task)
 
     suspend fun deleteTask(task: TaskEntity) = taskDao.deleteTask(task)
+
 }
+

@@ -1,9 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
     alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.hilt)
     alias(libs.plugins.safeargs)
+
+    alias(libs.plugins.hilt)
+
+
+
 }
 
 android {
@@ -46,6 +51,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+
     implementation(libs.androidx.material)
 
     implementation(libs.navigation.fragment.ktx)
@@ -55,6 +61,25 @@ dependencies {
     implementation(libs.lifecycle.livedata.ktx)
 
     implementation(libs.hilt.android)
+
+    implementation(libs.material)
+
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.lifecycle.livedata)
+    implementation(libs.lifecycle.runtime)
+
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    kapt(libs.room.compiler)
+
+    implementation(libs.hilt.core)
+
     kapt(libs.hilt.compiler)
 
     testImplementation(libs.junit)
