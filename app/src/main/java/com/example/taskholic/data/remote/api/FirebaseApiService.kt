@@ -3,6 +3,12 @@ package com.example.taskholic.data.remote.api
 import com.example.taskholic.data.remote.dto.TaskDto
 import com.example.taskholic.data.remote.dto.TaskListDto
 
+import retrofit2.http.GET
+import retrofit2.http.PUT
+import retrofit2.http.PATCH
+import retrofit2.http.DELETE
+import retrofit2.http.Path
+import retrofit2.http.Body
 interface FirebaseApiService {
 
     // TaskLists

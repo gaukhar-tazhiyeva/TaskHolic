@@ -1,6 +1,5 @@
 package com.example.taskholic.data.sync
 
-import android.content.SyncResult
 import com.example.taskholic.data.repository.FirebaseRepository
 import javax.inject.Inject
 

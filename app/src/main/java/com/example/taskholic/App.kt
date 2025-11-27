@@ -4,8 +4,9 @@ import android.app.Application
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import com.example.taskholic.data.workers.SyncWorker
+import com.example.taskholic.data.sync.SyncWorker
 import dagger.hilt.android.HiltAndroidApp
+import java.util.concurrent.TimeUnit   // ← добавили ЭТОТ импорт
 
 @HiltAndroidApp
 class App : Application() {

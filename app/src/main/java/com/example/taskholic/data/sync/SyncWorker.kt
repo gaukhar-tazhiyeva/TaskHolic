@@ -1,10 +1,9 @@
-package com.example.taskholic.data.workers
+package com.example.taskholic.data.sync
 
 import android.content.Context
 import android.content.SyncResult
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.example.taskholic.data.sync.SyncManager
 
 class SyncWorker(
     context: Context,
