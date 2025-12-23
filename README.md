@@ -1,49 +1,49 @@
-# TaskHolic: Productivity & Focus App
+# TaskHolic: Productivity App
 
-TaskHolic is a comprehensive Android application designed to boost productivity by combining task management, a focus timer, and daily motivation into a single, intuitive interface. Built with modern Android development practices, it provides a seamless and efficient user experience.
+TaskHolic is an Android app that helps you stay productive by combining task management, a focus timer, and daily motivation in one place. The app is simple, fast, and easy to use.
 
 ## Core Features
 
-### 1. Task Management (To-Do List)
-Organize your life with a powerful and easy-to-use to-do list.
+### 1. Task Management
 
-*   **Task Lists:** Create multiple lists to categorize your tasks (e.g., "Work," "Personal," "Groceries").
-*   **Add & Manage Tasks:** Quickly add new tasks to any list, mark them as complete, or delete them.
-*   **Offline Support:** All your tasks and lists are saved locally, so you can manage them even without an internet connection. Changes are automatically synced when you go online.
+- Task Lists: Create different lists to organize your tasks  
+- Task Control: Add tasks, mark them as done, or delete them  
+- Offline Access: Tasks are stored on the device and available without internet
 
 ### 2. Pomodoro Timer
-Enhance your focus and manage your time effectively using the built-in Pomodoro timer.
 
-*   **Classic Technique:** Work in focused 25-minute intervals, separated by short breaks, to maximize concentration and prevent burnout.
-*   **Simple Interface:** Start, pause, and reset the timer with clean and simple controls.
-*   **Persistent State:** The timer state is saved, so it continues accurately even if you navigate away from the app.
+Stay focused using the Pomodoro technique.
+
+- 25-Minute Sessions: Work in short focused intervals with breaks  
+- Simple Controls: Start, pause, and reset the timer easily  
+- Saved State: The timer continues correctly when you leave the screen
 
 ### 3. Motivational Quotes
-Get a fresh dose of inspiration every day to keep you motivated.
 
-*   **Random Daily Quote:** The app fetches a new motivational quote from a remote API each time you visit the quote screen.
-*   **Clean UI:** Displays the quote and its author in a clear, easy-to-read format.
-*   **Offline Cache:** The last fetched quote is saved locally, ensuring you always have a motivational message ready, even when offline.
+Get motivation when you need it.
 
-## Technical Architecture & Implementation
+- Random Quotes: A new quote is loaded from an online API  
+- Clean Design: Quotes are shown clearly with the author  
+- Offline Support: The last quote is saved and shown without internet
 
-This project is built using modern, industry-standard tools and a robust architecture to ensure it is scalable, maintainable, and efficient.
+## Technical Overview
 
-*   **Architecture: MVVM (Model-View-ViewModel)**
-    *   The app follows a clear MVVM pattern, separating the UI (Views), UI logic and state (ViewModels), and data handling (Model/Repository). This creates a loosely-coupled and testable codebase.
+The app is built with modern Android tools and follows clean architecture principles.
 
-*   **Asynchronous Programming: Kotlin Coroutines**
-    *   All asynchronous operations, such as network requests and database access, are handled efficiently using Kotlin Coroutines. This keeps the UI responsive and smooth.
+- Architecture: MVVM  
+  The app separates UI, logic, and data to keep the code clean and easy to maintain.
 
-*   **Networking: Retrofit & Firebase**
-    *   **Retrofit:** Used for fetching motivational quotes from a third-party REST API.
-    *   **Firebase Realtime Database:** The `FirebaseApiService` leverages Retrofit to act as a client for the Firebase Realtime Database, enabling real-time synchronization of tasks and task lists.
+- Concurrency: Kotlin Coroutines  
+  Used for background tasks like loading data and network requests.
 
-*   **Offline Mode: Room Database**
-    *   The app implements an offline-first approach using the **Room Persistence Library**. All tasks, lists, and quotes are stored in a local SQLite database, providing seamless access to data even without an internet connection.
+- Networking: Retrofit and Firebase  
+  Retrofit loads motivational quotes. Firebase is used to sync tasks and task lists.
 
-*   **Dependency Injection: Hilt**
-    *   Hilt is used to manage dependencies throughout the application, simplifying the creation and provision of objects like the `TaskRepository`, Daos, and API services.
+- Local Storage: Room Database  
+  All data is stored locally to support offline usage.
 
-*   **Version Control: Git**
-    *   The project is managed using Git, with a structured approach to branching and commits, facilitating organized development and code reviews.
+- Dependency Management: Hilt  
+  Hilt is used to provide repositories, databases, and services.
+
+- Version Control: Git  
+  Git is used to track changes and manage development.
