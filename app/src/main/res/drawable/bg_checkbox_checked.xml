@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Фон чекбокса -->
+    <item>
+        <shape>
+            <solid android:color="#9333EA"/> <!-- фиолетовый фон -->
+            <corners android:radius="4dp"/>
+        </shape>
+    </item>
+
+    <!-- Галочка -->
+    <item android:drawable="@drawable/ic_check" android:gravity="center"/>
+
+</layer-list>

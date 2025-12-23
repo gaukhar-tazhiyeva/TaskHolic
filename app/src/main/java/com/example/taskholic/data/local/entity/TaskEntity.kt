@@ -19,19 +19,11 @@ import androidx.room.PrimaryKey
 )
 data class TaskEntity(
     @PrimaryKey(autoGenerate = true)
-    val taskId: Long = 0,
-
-    val remoteId: String? = null,  // Firebase ID
+    val taskId: Long = 0L,
     val title: String,
-    val description: String? = null,
-    val isCompleted: Boolean = false,
+    val isCompleted: Boolean,
     val taskListId: Long,
-
-    val updatedAt: Long = System.currentTimeMillis(),
-
-    val isDeleted: Boolean = false,   // для soft delete
-
-    val createdAt: Long = System.currentTimeMillis()
+    val createdAt: Long,
+    val updatedAt: Long = System.currentTimeMillis(), // для конфликта last-write-wins
+    val remoteId: String? = null // для связи с Firebase
 )
-
-

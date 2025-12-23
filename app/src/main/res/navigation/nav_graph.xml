@@ -2,26 +2,52 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/taskListsFragment">
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.taskholic.HomeFragment"
+        android:label="Home">
+
+        <!-- Переход на Pomodoro -->
+        <action
+            android:id="@+id/action_home_to_pomodoro"
+            app:destination="@id/pomodoroFragment" />
+
+        <!-- Переход на TaskLists -->
+        <action
+            android:id="@+id/action_home_to_taskLists"
+            app:destination="@id/taskListsFragment" />
+
+    </fragment>
+
+    <!-- Pomodoro Fragment -->
+    <fragment
+        android:id="@+id/pomodoroFragment"
+        android:name="com.example.taskholic.ui.pomodoro.PomodoroFragment"
+        android:label="Pomodoro" />
+
+    <!-- TaskLists Fragment -->
+
 
     <fragment
         android:id="@+id/taskListsFragment"
-        android:name="com.example.taskholic.ui.tasklists.TaskListsFragment"
-        android:label="Lists">
+        android:name="com.example.taskholic.ui.tasklists.TaskListsFragment">
+
+
         <action
-            android:id="@+id/action_lists_to_tasks"
+            android:id="@+id/action_taskListsFragment_to_tasksFragment"
             app:destination="@id/tasksFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="com.example.taskholic.ui.tasks.TasksFragment"
-        android:label="Tasks">
+        android:name="com.example.taskholic.ui.tasks.TasksFragment">
         <argument
-            android:name="listId"
+            android:name="taskListId"
             app:argType="long" />
-        <argument
-            android:name="listName"
-            app:argType="string" />
     </fragment>
+
+
 </navigation>

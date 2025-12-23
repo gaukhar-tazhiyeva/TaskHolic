@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvListName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Task List"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+
+    <ImageButton
+        android:id="@+id/btnOptions"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@null"
+        android:src="@drawable/ic_more_vert"
+        android:contentDescription="Options"/>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TaskHolic"
+        android:textSize="32sp"
+        android:textColor="@color/foreground"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Секция функциональных кнопок (Pomodoro + Task Lists) -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:layout_gravity="center"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:rowOrderPreserved="false">
+
+        <!-- Кнопка Pomodoro -->
+        <LinearLayout
+            android:id="@+id/btn_open_pomodoro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/secondary">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_timer"
+                    app:tint="@color/primary"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pomodoro"
+                android:textColor="@color/foreground"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Кнопка Task Lists -->
+        <LinearLayout
+            android:id="@+id/btn_open_tasklists"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/secondary">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_checklist"
+                    app:tint="@color/primary"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To-do List"
+                android:textColor="@color/foreground"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Пустой слот для сетки -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@color/card"/>
+    </GridLayout>
+
+    <!-- Нижняя секция с кнопкой Exit -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/btn_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/bg_card">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_exit"
+                app:tint="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:textColor="@color/muted_foreground"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Пустая панель внизу для отступа -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="72dp"/>
+</LinearLayout>

@@ -3,17 +3,13 @@ package com.example.taskholic.data.remote.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import javax.inject.Inject
 
-class NetworkChecker @Inject constructor(
-    private val context: Context
-) {
-
+class NetworkChecker(private val context: Context) {
     fun isOnline(): Boolean {
-        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val network = cm.activeNetwork ?: return false
-        val caps = cm.getNetworkCapabilities(network) ?: return false
-
-        return caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork ?: return false
+        val capabilities = connectivityManager.getNetworkCapabilities(network) ?: return false
+        return capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
     }
 }
