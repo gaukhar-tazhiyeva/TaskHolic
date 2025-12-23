@@ -96,6 +96,39 @@
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
+        <!-- Кнопка Motivation Quote -->
+        <LinearLayout
+            android:id="@+id/btn_open_quote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/bg_card">
+
+            <FrameLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/secondary">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_motivation"
+                    app:tint="@color/primary"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motivation"
+                android:textColor="@color/foreground"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+
         <!-- Пустой слот для сетки -->
         <LinearLayout
             android:layout_width="0dp"

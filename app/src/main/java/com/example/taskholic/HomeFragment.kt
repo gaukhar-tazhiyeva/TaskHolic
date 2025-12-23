@@ -21,6 +21,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             findNavController().navigate(R.id.action_home_to_taskLists)
         }
 
+        val btnQuote = view.findViewById<LinearLayout>(R.id.btn_open_quote)
+        btnQuote.setOnClickListener {
+            findNavController().navigate(R.id.action_home_to_quote)
+        }
+
+
         val btnExit = view.findViewById<LinearLayout>(R.id.btn_exit)
         btnExit.setOnClickListener {
             // Закрываем активность

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
@@ -20,6 +21,10 @@
             android:id="@+id/action_home_to_taskLists"
             app:destination="@id/taskListsFragment" />
 
+        <!-- Переход на QuoteFragment -->
+        <action
+            android:id="@+id/action_home_to_quote"
+            app:destination="@id/quoteFragment" />
     </fragment>
 
     <!-- Pomodoro Fragment -->
@@ -29,18 +34,16 @@
         android:label="Pomodoro" />
 
     <!-- TaskLists Fragment -->
-
-
     <fragment
         android:id="@+id/taskListsFragment"
         android:name="com.example.taskholic.ui.tasklists.TaskListsFragment">
-
 
         <action
             android:id="@+id/action_taskListsFragment_to_tasksFragment"
             app:destination="@id/tasksFragment" />
     </fragment>
 
+    <!-- Tasks Fragment -->
     <fragment
         android:id="@+id/tasksFragment"
         android:name="com.example.taskholic.ui.tasks.TasksFragment">
@@ -49,5 +52,11 @@
             app:argType="long" />
     </fragment>
 
+    <!-- Quote Fragment -->
+    <fragment
+        android:id="@+id/quoteFragment"
+        android:name="com.example.taskholic.ui.quote.QuoteFragment"
+        android:label="Motivation Quote"
+        tools:layout="@layout/fragment_motivation_quote" />
 
 </navigation>
